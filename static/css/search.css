@@ -1,0 +1,19 @@
+.form{
+
+  background-color: #8B96CA;
+  width:35%;
+  border-radius: 20px;
+  padding:20px;
+  margin-left: 33%;
+  margin-top: 15%;
+  box-shadow: 5px 5px 5px;
+  text-align: center;
+}
+
+
+input{
+
+  border-radius:20px;
+
+
+}

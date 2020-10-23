@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Management System</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/login.css" %}">
+  </head>
+  <body>
+    {% if user.is_authenticated %}
+      <h1 class="container" >You are already logged in</h1>
+      <br>
+      <a href="{% url 'teacher:logout' %}"><button class="btn btn-warning" type="button">Log Out</button></a>
+    {% else %}
+    <div class="container formdiv">
+    <h2 class="container">Login</h2>
+    <form class="container" method="post" autocomplete="off">
+      {% csrf_token %}
+      <input type="text" name="username" placeholder="username">
+      <br>
+      <br>
+      <input type="password" name="password" placeholder="password">
+      <br>
+      <br>
+      <button type='submit' class="btn btn-primary btn-sm">Log In</button>
+    </form>
+   </div>
+    {% endif %}
+  </body>
+</html>

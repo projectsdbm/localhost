@@ -1,0 +1,30 @@
+.form{
+
+  position: absolute;
+  background-color: #8B96CA;
+  margin-top: 10%;
+  margin-left:27%;
+  margin-bottom: 10%;
+  padding:10%;
+  border-radius: 5%;
+}
+
+html {
+    overflow: scroll;
+    overflow-x: hidden;
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+}
+
+
+input{
+
+  border-radius: 20px;
+  border-color: black;
+  border-style: hidden;
+  width:65%;
+}

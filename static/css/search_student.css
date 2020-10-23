@@ -1,0 +1,29 @@
+.form{
+
+  background-color: #8B96CA;
+  width:30%;
+  margin-left: 35%;
+  margin-top: 18%;
+  padding:30px;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 5px 5px 5px;
+
+
+}
+
+input{
+
+  border-radius: 20px;
+  padding: 2px;
+
+
+}
+
+p{
+
+  color: red;
+  font-family: 'Shadows Into Light', cursive;
+  text-shadow: 1px 1px 0.5px black;
+
+}

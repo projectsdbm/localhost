@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static "css/search_student.css" %}">
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="form">
+
+    <form method="post" autocomplete="off">
+      {% csrf_token %}
+      <label for="rollno">Roll No:</label>
+      <input type="text" name="rollno" >
+      <br>
+      <br>
+      <label for="password">Password:</label>
+      <input type="password" name="password">
+      <br>
+      <br>
+      <button class="btn btn-light" type="submit">Get</button>
+      <br>
+      <br>
+      {% if Error %}
+        <p>rollno or password is wrong, Pls try again...</p>
+      {% endif %}
+    </form>
+  </div>
+  </body>
+</html>
